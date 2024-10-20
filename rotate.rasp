@@ -1,0 +1,4 @@
+def rotate(seq, amount) {
+    new_indices = (indices + amount) % length; 
+    return aggregate(select(new_indices, indices, ==), seq); 
+}

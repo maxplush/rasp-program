@@ -1,0 +1,11 @@
+def swap(seq) {
+  return aggregate(select(indices, indices+1, ==), seq, "x") 
+    if indices % 2 == 0 
+    else aggregate(select(indices, indices-1, ==), seq, "x");
+}
+
+def newswap(seq) {
+  return aggregate(select(indices, indices, ==), seq, "x") 
+    if length % 2 == 1 and indices == length - 1 
+    else swap(seq);
+}

@@ -5,7 +5,7 @@ For example:
 > reverse_indices("hello")
 [4, 3, 2, 1, 0]
 ```
-**Problem 1 Solution**
+**Problem 1 Solution:**
 ```
 >> reverse_indices = length - indices - 1;
      s-op: reverse_indices
@@ -24,7 +24,7 @@ For example:
 > rotate(tokens, 2)("hello")
 "lohel"
 ```
-**Problem 2 Solution**
+**Problem 2 Solution:**
 
 ```
 >> def rotate(seq, amount) {
@@ -51,7 +51,7 @@ For example:
 > swap(tokens)("ababab")
 "bababa"
 ```
-**Problem 3 Solution**
+**Problem 3 Solution:**
 
 ```
 def swap(seq) {
@@ -78,7 +78,7 @@ For example:
 > maxseq(tokens)("ababcabab")
 "ccccccccc"
 ```
-**Problem 4 Solution**
+**Problem 4 Solution:**
 
 ```
 >> def maxseq(seq) {
@@ -107,7 +107,7 @@ For example:
 > reverse_ag(tokens)("hello$XXXXXXXXXX")
 "hello$olleh     "
 ```
-**Problem 6 Solution**
+**Problem 6 Solution:**
 ```
 >> dollar_position = select_from_first(tokens, "$");
      selector: dollar_position
@@ -149,7 +149,7 @@ For example:
 > howmany(tokens, "l")("hello")
 "22222"
 ```
-**Problem 6 Solution**
+**Problem 6 Solution:**
 ```
 >> def howmany(seq, atom){
 ..     return selector_width(select(seq, atom, ==)) if contains(seq, atom) else "0";
@@ -178,11 +178,26 @@ For example:
 "00122"
 ```
 
-**Problem 7 Solution**
+**Problem 7 Solution:**
+```
 
 
-
-
+```
 **Problem 8:**
 Create your own "interesting" problem statement.
 Write a function/s-op that solves this problem.
+
+**Problem 8 Solution:**
+```
+>> def reverse_sequence(seq) {
+    return aggregate(select(indices, length - 1 - indices, ==), seq, "");
+..   ..   }
+     console function: reverse_sequence(seq)
+>> 
+.. reverse_sequence(tokens)("hello");
+         =  [o, l, l, e, h] (strings)
+>> 
+.. reverse_sequence(tokens)("nowhere");
+         =  [e, r, e, h, w, o, n] (strings)
+
+```

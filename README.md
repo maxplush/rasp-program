@@ -180,8 +180,14 @@ For example:
 
 **Problem 7 Solution:**
 ```
-
-
+>> def howmany(seq,atom){
+   return round(
+..   ..      length*aggregate(
+..      full_s,indicator(seq==atom)));
+..     }
+     console function: howmany(seq, atom)
+>> howmany(tokens, "a")("hello");
+         =  [0]*5 (ints)
 ```
 **Problem 8:**
 Create your own "interesting" problem statement.
@@ -199,5 +205,4 @@ Write a function/s-op that solves this problem.
 >> 
 .. reverse_sequence(tokens)("nowhere");
          =  [e, r, e, h, w, o, n] (strings)
-
 ```

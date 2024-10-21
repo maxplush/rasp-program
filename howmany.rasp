@@ -1,0 +1,5 @@
+def howmany(seq,atom){
+   return round(
+   length*aggregate(
+   full_s,indicator(seq==atom)));
+   }
